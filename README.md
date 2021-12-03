@@ -110,24 +110,24 @@
 
 # Hardware/Software Cost
 
-| Item              | Price        
+
+| Item              | Price(INR)        
 | ----------------- | ------------------- 
-| ESP32        | Mobile app (Ionic)   
-| `src-aws`         | Serverless AWS backend + GraphQL API  
-| `src-esp32`       | Firmware for the ESP32 (measuring device)  
+| ESP32             | 600   
+| LCD Display (I2C) | 300  
+| Protoboards       | 200  
+| Headphone jacks   | 100
+| Capacitor (10µF)  | 50 
+| CT Sensor (YHDC SCT-013)   | 700  
+| Resistors (between 10k and 470k Ω)    
+| Total	cost        | INR 1500 ~ $20 
 
-## Structure
+
+## Wiring Diagram
 
 
-This project consists out of multiple components:
+  <img width="333" alt="CT-Sensor-Circuit-Diagram" src="https://user-images.githubusercontent.com/89841006/144637613-84e7b29f-dd3f-4c47-adeb-7f77aeb473f5.PNG">
 
-| Folder            | Description         | Build status | 
-| ----------------- | ------------------- | ------------ | 
-| `src-app`         | Mobile app (Ionic)  | n/a |
-| `src-aws`         | Serverless AWS backend + GraphQL API | ![AWS Build Status](https://github.com/Savjee/home-energy-monitor/workflows/aws/badge.svg) |
-| `src-esp32`       | Firmware for the ESP32 (measuring device) | ![Firmware Build Status](https://github.com/Savjee/home-energy-monitor/workflows/firmware/badge.svg) |
-
-(TODO: add instructions on how to deploy all of this. 😅)
 
 ## Video explanation
 
@@ -138,33 +138,38 @@ This project consists out of multiple components:
 *[https://www.youtube.com/watch?v=ah3ezprtgmc](https://www.youtube.com/watch?v=ah3ezprtgmc)*
 </div>
 
-Read my blog post for more instructions: [https://savjee.be/2019/07/Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib/](https://savjee.be/2019/07/Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib/)
 
-## Cloud Architecture
+## Cloud Architecture Diagram
 
-This is the cloud architecture that powers the energy meter and the app:
+This is the cloud architecture for the prototype:
 
-![AWS Cloud Architecture](https://savjee.github.io/home-energy-monitor/readme-images/architecture.png)
+   ![Cloud_Architecture](https://user-images.githubusercontent.com/89841006/144638424-81e47880-e8cb-4537-b3bd-1ff6b704fd58.png)
+
 
 In a nutshell:
-* The ESP32 has a MQTT connection with AWS IoT Core
-* Every 30 seconds, 30 measurements are sent to AWS
-* These measurements are stored in DynamoDB (IoT Rule)
-* Once a day, all readings from the previous day are archived to S3
-* A GraphQL API (hosted on Lambda) exposes the data stored in DynamoDB
+* The ESP32 has a MQTT connection with Azure IoT Core
+* Every 10 seconds the power/occupancy/temperature measurements are sent to Azure. This happens 8640 times a day (6 times per minute).
+* These measurements are stored in Cosmos 
+* Once a day, all readings from the previous day are archived to SQL
+* A GraphQL API (hosted on Lambda) exposes the data stored in Cosmos
+* Machine learning will gradually learn about your home as things turn on and off
+* Machine learning uses that data to determine what devices are on and off
+* Have a simple app to visualize the data and analyze trends over time
+* Generate Intelligent Smart Actions/Alerts based on data analytics and machine learning
 
 ## Screenshots
 
 Web dashboard, built on top of the GraphQL API:
 
-![Screenshot Web Dashboard](https://savjee.github.io/home-energy-monitor/readme-images/web-dashboard.png)
+ <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
 
-What is displayed on the ESP32 OLED display:
+
+Hardware : CT Sensor -ESP32 OLED display:
 
 ![Screenshot ESP32 OLED](https://savjee.github.io/home-energy-monitor/readme-images/esp32-oled.jpg)
 
 
-## DIY Requirements
+## Instructions
 
 To build your own Energy Monitor you need the following hardware:
 
@@ -178,9 +183,26 @@ Other requirements:
 * Install [PlatformIO](https://platformio.org) on your system
 * Drivers for your ESP32 board
 
-Read my blog post for more instructions: [https://savjee.be/2019/07/Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib/](https://savjee.be/2019/07/Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib/)
+# Future Improvements
+
+## Better Energy Management
+
+ * The improvements helps us save nearly 40% of the electricity monthly with Intelligent smart scenes with predictive analysis using different sensors like motion,airquality,security system
+ * Additional selling feature for Security and Home automation product companies
+ * Integration of Amazon Alexa/Google Home 
+ 
+## Motor stalls – Pro Active service alert
+ 
+ * In the home power critical devices like an AC or washing machine use motors.
+ * When a stall occurs, the motor has stopped rotating even when there is enough voltage at its terminals.
+ * This can indicate trouble for the future, serving as a warning of device failure ahead
+
+## Power quality –Application Maintenance
+
+ * Tracks voltage in real-time, average, and upper and lower bounds to give the user an idea of consistency of quality.
+ * Recent spikes and dips. 
+ * This alarms for service of the home appliances .
+ * Proactive alert on the application Health check up and services
 
 
-## Contribute
 
-I'm happy to merge in any pull requests. Also feel free to report bugs or feature requests.
