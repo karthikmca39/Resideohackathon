@@ -38,7 +38,14 @@
 * Occupancy Sensor - The Occupancy sensors are devices that detect when a space is occupied/unoccupied. This sensor is placed on living, bedroom where high-power consuming devices are mounted
 * Temperature Sensor – To detect current temperature in each rooms inside home
 * ESP32 microcontroller, Arduino
-* Azure Cloud for data analytics and machine learning
+* Azure Cloud componenets 
+  -IOT Hub
+  -Azure Data Factory
+  -App Service
+  -Data Lake Gen2
+  -SQL Server  
+* Azure ML Studio for machine learning model creation.
+* Canvas js for buling charts(trail version)
 
 ## Assumptions, constraints, and solution decision points (Reason behind choosing a technology)
 
