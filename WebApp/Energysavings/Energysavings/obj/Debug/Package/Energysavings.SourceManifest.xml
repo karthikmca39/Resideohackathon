@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\KARTHIK Documents\Study\Hackthon\Energysavings\Energysavings\obj\Debug\Package\PackageTmp" />
+  <setAcl path="C:\KARTHIK Documents\Study\Hackthon\Energysavings\Energysavings\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\KARTHIK Documents\Study\Hackthon\Energysavings\Energysavings\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
