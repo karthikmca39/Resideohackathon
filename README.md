@@ -98,9 +98,9 @@
 
   ![SelfieSmartSensorZ](https://user-images.githubusercontent.com/89841006/144635412-17cdd814-2846-489c-a1f4-5cc1a4c60298.png)
 
-## Prototype -What we did 
+## Prototype - What we did 
 
-* Hardware set up using CT, Occupancy and temperature sensors
+* Hardware set up using CT, Occupancy(PIR sensor used for prototype) and temperature/humidity sensors
 * Wiring the circuit for data collection
 * Real time power usage data for the devices(AC,washing machine,fan,light) are collected for 15 days
 * IOT simulator for 30 days(required for data analytics)
@@ -117,14 +117,14 @@
 
 | Item              | Price(INR)        
 | ----------------- | ------------------- 
-| ESP32             | 600   
+| ESP32 arudino board            | 900   
 | LCD Display (I2C) | 300  
 | Protoboards       | 200  
 | Headphone jacks   | 100
 | Capacitor (10µF)  | 50 
 | CT Sensor (YHDC SCT-013)   | 700  
-| Resistors (between 10k and 470k Ω)    
-| Total	cost        | INR 1500 ~ $20 
+| Resistors (between 10k and 470k Ω)/wires | 300    
+| Total	cost        | INR 2350 ~ $31 
 | Azure Cloud – Free Tier
 
 
@@ -162,7 +162,9 @@ In a nutshell:
 
 ## Screenshots
 
-Web dashboard, built on top of the GraphQL API:
+Web dashboard, built on top of the GraphQL API: 
+
+Real time prototype Web dashboard URL : http://homeenergysavings.azurewebsites.net/
 
  <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
 
@@ -178,6 +180,9 @@ Hardware : CT Sensor -ESP32 OLED display:
 
 
 
+## Demo Link
+ 
+ * Web dashboard URL : http://homeenergysavings.azurewebsites.net/
 
 # Future Improvements
 
