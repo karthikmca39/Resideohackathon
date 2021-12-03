@@ -37,6 +37,7 @@
 * CT - Current sensor (YHDC SCT-013-030) - This sensor clamps over the main cable(MCB) in the house and transforms the magnetic field around the cable into a voltage
 * Occupancy Sensor - The Occupancy sensors are devices that detect when a space is occupied/unoccupied. This sensor is placed on living, bedroom where high-power consuming devices are mounted
 * Temperature Sensor – To detect current temperature in each rooms inside home
+* PIR sensor (Occupancy used for prototype) 
 * ESP32 microcontroller, Arduino
 * Azure Cloud componenets 
   * IOT Hub
@@ -51,19 +52,20 @@
 
 * Serverless. using Azure cloud free account. This entire architecture falls under the Azure free tier. AWS will be cheaper . 
 * Hardware Cost and Cloud pricing (pay as per you go model).
-* Azure databricks used for distributed computing to do data analytics and machine learning(limitation on Azure free tier account).
+* Azure databricks used for distributed computing to do data analytics. 
+* Azure ML Studio is used for machine learning(limitation on Azure free tier account).
 * IOT hub sensor data push limitation
 * Each home is different, however, so the number of detected devices may be higher or lower
 * The identical device detection will take 3-6 months based on usage pattern.
-* Need at least 1-3 months sensors data to build energy usage pattern 
-* Need at least 1 year data to predict device maintanence and service
+* Need at least 1-3 months sensors data to build energy usage pattern.
+* Need at least 1 year data to predict device maintanence and service.
 
 ## How easily can your solution be implemented and how effective will it be?
 
 * No wire-cutting and not putting a meter between every socket and appliances.
 * Used Azure free Tier account for this prototype
 * The hardware cost is minimal and for data analytics the cloud is required (distributed computing).The cloud cost can be reduced by using open source technologies
-* Take measurements every 10 second to get an accurate  picture of electricity consumption.
+* Take measurements every 1 second to get an accurate  picture of electricity consumption.
 * Save all the data in the cloud for later use & analytics.
 * The application first trains for the existing appliances and then constantly shows the values of the electricity consumed individually for each appliances
 * It gives statistics of electricity consumed by the individual appliance and cost associated
@@ -114,7 +116,7 @@
 * Used Azure Cloud – Free Tier
 * Created Azure IOT Hub to push sensor data
 * Created Azure data bricks for streaming data analytics
-* Azure blob and cosmos and SQL for Hot and cold data storage 
+* Azure blob and SQL for Hot and cold data storage 
 * Able to discover devices AC,fan,washing machine,light.For this prototype we have added this metadata
 * Explored and identified machine learning algorithm for building up EneryHomecontroller Model for predictive analysis
 * Web dashboard to show up energy usage and Intelligent smart alerts and smart actions
@@ -158,10 +160,10 @@ This is the cloud architecture for the prototype:
 
 In a nutshell:
 * The ESP32 has a MQTT connection with Azure IoT Core
-* Every 10 seconds the power/occupancy/temperature measurements are sent to Azure. This happens 8640 times a day (6 times per minute).
-* These measurements are stored in Cosmos 
+* Every 1 seconds the power/occupancy/temperature measurements are sent to Azure. This happens 8640 times a day (6 times per minute).
+* These measurements are stored in Azure Hot storage(SQL) 
 * Once a day, all readings from the previous day are archived to SQL
-* A GraphQL API (hosted on Lambda) exposes the data stored in Cosmos
+* A GraphQL API (hosted on Lambda) exposes the data stored in Azure Hot storage(SQL)
 * Machine learning will gradually learn about your home as things turn on and off
 * Machine learning uses that data to determine what devices are on and off
 * Have a simple app to visualize the data and analyze trends over time
@@ -182,10 +184,10 @@ Hardware : CT Sensor -ESP32 OLED display:
 
 ## Data Analytics – Machine Learning Algorithm
 
-* 
-
-
-
+* Used Azure ML Studio for Machine learning model creation.
+* Connected source data system to ML Studio. 
+* Used Decision Forest Regression Algorithm for train the ML model
+* Deployed Model as web service in Azure ML Studio. 
 
 ## Demo Link
  
