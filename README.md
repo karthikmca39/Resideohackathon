@@ -39,11 +39,11 @@
 * Temperature Sensor – To detect current temperature in each rooms inside home
 * ESP32 microcontroller, Arduino
 * Azure Cloud componenets 
-  -IOT Hub
-  -Azure Data Factory
-  -App Service
-  -Data Lake Gen2
-  -SQL Server  
+  *IOT Hub
+  *Azure Data Factory
+  *App Service
+  *Data Lake Gen2
+  *SQL Server  
 * Azure ML Studio for machine learning model creation.
 * Canvas js for buling charts(trail version)
 
