@@ -48,7 +48,8 @@
 * IOT hub sensor data push limitation
 * Each home is different, however, so the number of detected devices may be higher or lower
 * The identical device detection will take 3-6 months based on usage pattern.
-* Need at least 1-3 months sensors data to build energy usage pattern
+* Need at least 1-3 months sensors data to build energy usage pattern 
+* Need at least 1 year data to predict device maintanence and service
 
 ## How easily can your solution be implemented and how effective will it be?
 
@@ -65,7 +66,7 @@
 
 * Archive sensor data for machine learning and  future analytics 
 * Able to handle multiple sensors (any sensors can be added in future)
-* Save all the data in the cloud for later use & do use machine learning to build EnergyHomeController for predictive analysis
+* Save all the data in the cloud for later use & do use machine learning to build individual EnergyHomeController Model for predictive analysis
 * Must be able to handle any data rate pushed to IOT Hub
 * The machine learning algorithm begins to recognize the appliances and other devices that use more power like AC,fridge,Owen,TV.
 * Security system is Armed away. You television turned on, Lights on. Do this need to be turned off?
@@ -74,10 +75,11 @@
 * Did you forgot to turn off the oven? 
 * Additional selling feature for Security and Home automation product companies
 
-# USECASE
+# REALTIME USECASES
 
  ## AC Energy Comparison
 
+ * The AC power usage was derived based on real problem faced by me due to more electricity bill
  * Air conditioners are one of the biggest energy hogs in the home, accounting for more than 25% of yearly electric use.
  * To consider a case of AC, it will study the usage patterns of AC, at what temperature it has been used and for what time. 
  * It will learn this data for a week, and then it will automatically power on and off the AC without human interference. 
@@ -100,11 +102,13 @@
 
 * Hardware set up using CT, Occupancy and temperature sensors
 * Wiring the circuit for data collection
-* IOT simulator for 15 days(required for data analytics)
+* Real time power usage data for the devices(AC,washing machine,fan,light) are collected for 15 days
+* IOT simulator for 30 days(required for data analytics)
 * Used Azure Cloud – Free Tier
 * Created Azure IOT Hub to push sensor data
 * Created Azure data bricks for streaming data analytics
 * Azure blob and cosmos and SQL for Hot and cold data storage 
+* Able to discover devices AC,fan,washing machine,light.For this prototype we have added this metadata
 * Explored and identified machine learning algorithm for building up EneryHomecontroller Model for predictive analysis
 * Web dashboard to show up energy usage and Intelligent smart alerts and smart actions
 
@@ -121,6 +125,7 @@
 | CT Sensor (YHDC SCT-013)   | 700  
 | Resistors (between 10k and 470k Ω)    
 | Total	cost        | INR 1500 ~ $20 
+| Azure Cloud – Free Tier
 
 
 ## Wiring Diagram
@@ -132,8 +137,6 @@
 ## Video explanation
 
 <div align="center">
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ah3ezprtgmc/0.jpg)](https://www.youtube.com/watch?v=ah3ezprtgmc)
 
 *[https://www.youtube.com/watch?v=ah3ezprtgmc](https://www.youtube.com/watch?v=ah3ezprtgmc)*
 </div>
@@ -163,25 +166,18 @@ Web dashboard, built on top of the GraphQL API:
 
  <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
 
-
 Hardware : CT Sensor -ESP32 OLED display:
 
 ![Screenshot ESP32 OLED](https://savjee.github.io/home-energy-monitor/readme-images/esp32-oled.jpg)
 
 
-## Instructions
+## Data Analytics – Machine Learning Algorithm
 
-To build your own Energy Monitor you need the following hardware:
+* 
 
-* ESP32
-* CT sensor: YHDC SCT-013-030 (30A/1V)
-* 10µF capacitor
-* 2 resistors (between 10k-470kΩ)
 
-Other requirements:
-* AWS Account (Should be able to run in free-tier)
-* Install [PlatformIO](https://platformio.org) on your system
-* Drivers for your ESP32 board
+
+
 
 # Future Improvements
 
