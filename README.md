@@ -147,8 +147,11 @@
 ## Video explanation
 
 <div align="center">
+ 
+ * Resideo Sensors Hackthon 2021 - SmartSensorZ - Prototype Phase II - Software Workflow - https://youtu.be/fz41v6XFO7k
+ 
+ * Resideo Sensors Hackathon 2021- SmartSensorZ - Prototype Phase ll - Hardware Setup - https://www.youtube.com/watch?v=NzNUoolnMGU 
 
-*[https://www.youtube.com/watch?v=ah3ezprtgmc](https://www.youtube.com/watch?v=ah3ezprtgmc)*
 </div>
 
 
