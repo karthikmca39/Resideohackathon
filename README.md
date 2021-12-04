@@ -196,11 +196,6 @@ Hardware : CT Sensor -ESP32 Arduino Display:
 
 ![Software architecure Diagram](https://user-images.githubusercontent.com/89841006/144700156-b8f54e5f-1e56-43fc-b884-5cda2e81b34e.jpg)
 
-![Hacathon_ML](https://user-images.githubusercontent.com/89841006/144700170-45d97174-0194-4a18-9f79-03d3c33cf994.jpg)
-
-![ModelFit](https://user-images.githubusercontent.com/89841006/144700185-00ef3468-c3f3-413d-9610-94d39f143e67.PNG)
-
-
 ## Data Analytics – Machine Learning Algorithm
 
 * Used Azure ML Studio for Machine learning model creation.
