@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="sqlConnection-Web.config Connection String" description="sqlConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source= energysaving.database.windows.net; Integrated Security=true;Initial Catalog= energysavings; uid=karthikt; Password=Pranitha@123; " tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\KARTHIK\ Documents\\Study\\Hackthon\\Energysavings\\Energysavings\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='sqlConnection']/@connectionString" />
-  </parameter>
-</parameters>

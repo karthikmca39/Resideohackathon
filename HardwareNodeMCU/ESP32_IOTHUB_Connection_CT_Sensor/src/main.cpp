@@ -143,7 +143,7 @@ void loop()
       watt = 0;   
       amps = 0;
       amps = emon1.calcIrms(1480); // Calculate Irms only 
-      watt = (amps * HOME_VOLTAGE)-1.25; 
+      watt = (amps * HOME_VOLTAGE); 
       Serial.println(watt);
 
       // Send teperature data
