@@ -135,6 +135,7 @@
 | Resistors (between 10k and 470k Ω)/wires | 300    
 | Total	cost        | INR 2350 ~ $31 
 | Azure Cloud – Free Tier
+| Additional cost for ML Components
 
 
 ## Wiring Diagram
