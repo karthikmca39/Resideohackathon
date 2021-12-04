@@ -179,11 +179,9 @@ Web dashboard, built on top of the GraphQL API:
 
 Real time prototype Web dashboard URL : http://homeenergysavings.azurewebsites.net/
 
- <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
-![HacthonDashboard](https://user-images.githubusercontent.com/7225430/144700846-753ba3aa-2539-4969-b4b6-21297b7b6e52.jpg)
+ <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/7225430/144700846-753ba3aa-2539-4969-b4b6-21297b7b6e52.jpg"> 
 
 Hardware : CT Sensor -ESP32 Arduino Display:
-
 
 ![ESB32_Ardunio](https://user-images.githubusercontent.com/89841006/144699996-d137eef2-2712-43d4-8012-d99d543efc0d.jpg)
 
