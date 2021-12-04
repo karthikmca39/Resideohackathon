@@ -177,9 +177,28 @@ Real time prototype Web dashboard URL : http://homeenergysavings.azurewebsites.n
 
  <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
 
-Hardware : CT Sensor -ESP32 OLED display:
+Hardware : CT Sensor -ESP32 Arduino Display:
 
-![Screenshot ESP32 OLED](https://savjee.github.io/home-energy-monitor/readme-images/esp32-oled.jpg)
+
+![ESB32_Ardunio](https://user-images.githubusercontent.com/89841006/144699996-d137eef2-2712-43d4-8012-d99d543efc0d.jpg)
+
+![Hardware setup](https://user-images.githubusercontent.com/89841006/144700105-8aa183b7-7c6f-42cf-b1ad-9a42f77228cf.jpg)
+
+![Electornics](https://user-images.githubusercontent.com/89841006/144700112-adb7f716-3cdc-4700-ba2e-44fa7ec97819.jpg)
+
+![CT_sensor](https://user-images.githubusercontent.com/89841006/144700114-fb8e8cb5-20e7-42f1-b415-3d12b9149f9a.jpg)
+
+![Serial port real time data](https://user-images.githubusercontent.com/89841006/144700118-b6f56aaa-33c3-42da-acb2-7e02c3eac74f.jpg)
+
+![Azure_Software_Sheet](https://user-images.githubusercontent.com/89841006/144700125-2c026ce2-98d3-4f97-9c33-eb776bea7994.jpg)
+
+![CT_Sensor_To_MCB](https://user-images.githubusercontent.com/89841006/144700133-c56ba2f4-1840-41c2-a871-83711001e2b8.jpg)
+
+![Software architecure Diagram](https://user-images.githubusercontent.com/89841006/144700156-b8f54e5f-1e56-43fc-b884-5cda2e81b34e.jpg)
+
+![Hacathon_ML](https://user-images.githubusercontent.com/89841006/144700170-45d97174-0194-4a18-9f79-03d3c33cf994.jpg)
+
+![ModelFit](https://user-images.githubusercontent.com/89841006/144700185-00ef3468-c3f3-413d-9610-94d39f143e67.PNG)
 
 
 ## Data Analytics – Machine Learning Algorithm
@@ -188,6 +207,18 @@ Hardware : CT Sensor -ESP32 OLED display:
 * Connected source data system to ML Studio. 
 * Used Decision Forest Regression Algorithm for train the ML model
 * Deployed Model as web service in Azure ML Studio. 
+
+ # ML Model Pipeline 
+ 
+  * ![Hacathon_ML](https://user-images.githubusercontent.com/89841006/144700010-3bcebb93-cb8f-4b45-b000-822a5725137c.jpg)
+
+
+ # ML Model Evaluation
+ 
+  * ![ModelFit](https://user-images.githubusercontent.com/89841006/144700048-bfa3ad3c-0a17-4305-b257-35fcc4ed9429.PNG)
+
+
+
 
 ## Demo Link
  
