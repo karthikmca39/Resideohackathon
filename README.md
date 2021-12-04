@@ -148,9 +148,9 @@
 
 <div align="center">
  
- * Resideo Sensors Hackthon 2021 - SmartSensorZ - Prototype Phase II - Software Workflow - https://youtu.be/fz41v6XFO7k
- 
  * Resideo Sensors Hackathon 2021- SmartSensorZ - Prototype Phase ll - Hardware Setup - https://www.youtube.com/watch?v=NzNUoolnMGU 
+ 
+ * Resideo Sensors Hackthon 2021 - SmartSensorZ - Prototype Phase II - Software Workflow - https://youtu.be/fz41v6XFO7k
 
 </div>
 
@@ -180,6 +180,7 @@ Web dashboard, built on top of the GraphQL API:
 Real time prototype Web dashboard URL : http://homeenergysavings.azurewebsites.net/
 
  <img width="954" alt="web_dashboard" src="https://user-images.githubusercontent.com/89841006/144638317-80401cb7-e5ce-4e0a-9f35-64486e87dbc6.PNG"> 
+![HacthonDashboard](https://user-images.githubusercontent.com/7225430/144700846-753ba3aa-2539-4969-b4b6-21297b7b6e52.jpg)
 
 Hardware : CT Sensor -ESP32 Arduino Display:
 
